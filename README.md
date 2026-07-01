@@ -4,7 +4,7 @@ An interactive 3D model of the Solar System built with [Three.js](https://threej
 
 ## Live demo
 
-Hosted on GitHub Pages: `https://yourusername.github.io/your-repo-name/`
+Hosted on GitHub Pages: https://meisam81.github.io/solar-system-explorer/
 
 ## Features
 
