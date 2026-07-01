@@ -14,3 +14,6 @@ npm-debug.log*
 
 # Local temp files
 tmp_texture.jpg
+
+# Claude Code local settings
+.claude/
