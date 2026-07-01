@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="loading" class="overlay">
+    <div class="spinner"></div>
+    <p>Loading solar system textures…</p>
+  </div>
+
+  <div id="canvas-container"></div>
+
+  <div id="ui-controls" class="ui-panel">
+    <h1>Solar System</h1>
+    <div class="control-row">
+      <label for="speed-slider">Orbit speed</label>
+      <input id="speed-slider" type="range" min="0" max="5" step="0.1" value="1" />
+      <span id="speed-value">1.0×</span>
+    </div>
+    <div class="control-row buttons">
+      <button id="btn-pause">Pause</button>
+      <button id="btn-reset">Reset camera</button>
+      <button id="btn-realtime">Real-time now</button>
+    </div>
+    <div id="sim-date" class="sim-date"></div>
+    <p class="hint">Drag to rotate • Right-drag to pan • Scroll to zoom • Click a planet or moon for info</p>
+  </div>
+
+  <div id="tooltip" class="tooltip hidden"></div>
+
+  <aside id="info-card" class="info-card hidden">
+    <button id="info-close" class="close" aria-label="Close">×</button>
+    <div id="info-content">
+      <h2 id="info-name">Planet</h2>
+      <p id="info-type" class="subtitle"></p>
+      <img id="info-image" src="" alt="" />
+      <dl id="info-stats"></dl>
+      <p id="info-desc"></p>
+    </div>
+  </aside>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
